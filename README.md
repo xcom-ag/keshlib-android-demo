@@ -6,7 +6,7 @@ Sollten Sie einen Zugang zu unserem Demo-System und später für die Produktions
 Dort erhalten Sie die für den Zugang benötigten Zertifikate sowie weitere Dokumentationen.
 
 ## Installation
-1. Name des JAR-Pakets: keshlib-0.0.1.jar (im Demo-Projekt enthalten im „libs“-Verzeichnis)
+1. Name des JAR-Pakets: keshlib-\[version\].jar (im Demo-Projekt enthalten im „libs“-Verzeichnis)
 2. Fügen Sie das JAR-Paket in den Projekt-Einstellungen dem Java Build Path (über den Reiter "Libraries") hinzu.
 3. Die "JRE System Library" sollte ebenfalls im Projekt verlinkt sein.
 
