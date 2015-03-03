@@ -51,7 +51,7 @@ KeshServiceManager.initializeManager(conf);
 
 // After initialization, you can get the instance
 KeshServiceManager serviceManager = KeshServiceManager.getInstance();
-``
+```
 
 ##  Verbindungsaufbau
 Einmal konfiguriert, kann anschließend der Verbindungsaufbau erfolgen:
