@@ -109,7 +109,7 @@ public void unregisterForNotification() {
 }
 ```
 
-6.2.6  Verbindungsstatus
+##  Verbindungsstatus
 Die Library bietet die Möglichkeit einen Listener für Änderungen am Verbindungsstatus zu registrieren. Wie auch die OnNotificationReceivedListener können OnConnectivityChangedListener an- und abgemeldet werden. Alle registrierten Listener werden über Änderungen informiert.
 ```java
 public void registerForConnectionChanges() {
