@@ -3,7 +3,11 @@ In den folgenden Abschnitten wird erläutert, wie das Framework (jar-Paket) in I
 
 ## Zugangsdaten und weiterführende Dokumentationen
 Sollten Sie einen Zugang zu unserem Demo-System und später für die Produktionsumgebung wünschen, [wenden Sie sich bitte an unseren Support.](http://kesh.de/details-partnerintegration)
-Dort erhalten Sie die für den Zugang benötigten Zertifikate sowie weitere Dokumentationen.
+Dort erhalten Sie die für den Zugang benötigten Zertifikate.
+
+Die Schnittstellendokumentation finden Sie unter folgendem Link: [kesh - Schnittstellenbeschreibung für Fremd-Apps.pdf](https://github.com/xcom-ag/keshlib-ios-demo/blob/master/kesh%20-%20Schnittstellenbeschreibung%20für%20Fremd-Apps.pdf?raw=true)
+
+Sollten Sie auch die Registrierung für kesh einbinden wollen, finden Sie eine Beschreibung hierzu in folgendem Dokument: [kesh - Einbindung der Registrierung Fremd-App.pdf](https://github.com/xcom-ag/keshlib-ios-demo/blob/master/kesh%20-%20Einbindung%20der%20Registrierung%20Fremd-App.pdf?raw=true)
 
 ## Installation
 1. Name des JAR-Pakets: keshlib-\[version\].jar (im Demo-Projekt enthalten im „libs“-Verzeichnis)
@@ -70,7 +74,8 @@ private void connect() {
     serviceManager.connectToServer(SERVER_URL, cert, store, storePasswd);
 }
 ```
-In der Methode loadClientKeyStore() wird ein KeyStore mittels der benötigten P12-Datei erstellt, loadCertificateFromFile() lädt das X.509-Server-Zertifikat. Die Implementierung dieser Methoden ist im Demo-Projekt ersichtlich.
+In der Methode loadClientKeyStore() wird ein KeyStore mittels der benötigten .p12-Datei erstellt, loadCertificateFromFile() lädt das X.509-Server-Zertifikat. Die Implementierung dieser Methoden ist im Demo-Projekt ersichtlich.
+Die Zertifikate und das zugehörige Passwort erhalten Sie [unter o. g. Ansprechstelle](#zugangsdaten-und-weiterführende-dokumentationen). 
 
 ## Abschicken von Requests
 Der nächste Schritt ist  der Login des Nutzers. Durch den Login erhält die kesh-Bibliothek ein Session-Token, welches dann automatisch für die weiteren Requests genutzt wird:
