@@ -61,6 +61,7 @@ public class MainActivity extends BaseActivity {
 		}
 	};
 
+	// The callback used to register for notifications
 	OnNotificationReceivedListener notificationListener = new OnNotificationReceivedListener() {
 		@Override
 		public void onAccountBalanceNotificationReceived(AccountBalanceNotificationBody arg0) {
