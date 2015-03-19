@@ -22,6 +22,7 @@ import de.xcom.kesh.keshlib.communication.OnNotificationReceivedListener;
 import de.xcom.kesh.keshlib.communication.OnResponseReceivedCallback;
 import de.xcom.kesh.keshlib.communication.response_v2.body.AccountBalanceNotificationBody;
 import de.xcom.kesh.keshlib.communication.response_v2.body.AccountBalanceResponseBody;
+import de.xcom.kesh.keshlib.communication.response_v2.body.AuthorizationRequiredNotificationBody;
 import de.xcom.kesh.keshlib.communication.response_v2.body.ChargeAccountResponseBody;
 import de.xcom.kesh.keshlib.communication.response_v2.body.CreateMandateResponseBody;
 import de.xcom.kesh.keshlib.communication.response_v2.body.DischargeAccountResponseBody;
@@ -77,6 +78,16 @@ public class MainActivity extends BaseActivity {
 				@Override
 				public void run() {
 					showDialog("Notification received", "PaymentInfoNotification");
+				}
+			});
+		}
+
+		@Override
+		public void onAuthorizationRequiredNotificationReceived(AuthorizationRequiredNotificationBody arg0) {
+			runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					showDialog("Notification received", "AuthorizationRequiredNotification");
 				}
 			});
 		}
