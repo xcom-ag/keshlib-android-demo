@@ -37,6 +37,7 @@ import de.xcom.kesh.keshlib.communication.response_v2.body.RequestPaymentRespons
 import de.xcom.kesh.keshlib.communication.response_v2.body.ResponseBody;
 import de.xcom.kesh.keshlib.communication.response_v2.body.SaveAvatarResonseBody;
 import de.xcom.kesh.keshlib.communication.response_v2.body.SendMoneyResponseBody;
+import de.xcom.kesh.keshlib.communication.response_v2.body.UserUpgradedNotificationBody;
 import de.xcom.kesh.keshlib.communication.response_v2.body.data.Amount;
 import de.xcom.kesh.keshlib.communication.response_v2.body.data.ImageData;
 import de.xcom.kesh.keshlib.util.Formatter;
@@ -91,6 +92,17 @@ public class MainActivity extends BaseActivity {
 					showDialog("Notification received", "AuthorizationRequiredNotification");
 				}
 			});
+		}
+
+		@Override
+		public void onUserUpgradedNotificationReceived(UserUpgradedNotificationBody arg0) {
+			runOnUiThread(new Runnable() {
+				@Override
+				public void run() {
+					showDialog("Notification received", "UserUpgradedNotification");
+				}
+			});
+			
 		}
 	};
 
